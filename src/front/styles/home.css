@@ -1,7 +1,143 @@
-/*
-    home.css: This website contains selectors only used in home.css
+/* General Styles for Home Example Services View */
+body {
+    font-family: 'Helvetica Neue', sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    background: url('https://img.freepik.com/premium-photo/dark-green-leaves-park-background-image_946346-4172.jpg') no-repeat center center fixed;
+    background-size: cover;
+    background-color: rgba(0, 0, 0, 0.7); /* Adding a dark overlay for better contrast */
+}
 
-    All pages share the styles on index.css but you should create 
-    one more css for each page that will contain the selected used 
-    on that page only (the ones not reused in other pages).
-*/
+h1, h2, h3 {
+    color: #ffffff; /* White text for headings on green backgrounds */
+}
+
+p, a {
+    color: #ffffff; /* White text for paragraphs and links on green backgrounds */
+}
+
+/* Jumbotron Section */
+.jumbotron {
+    background-color: rgba(7, 54, 66, 0.8); /* Base color with transparency */
+    padding: 50px 20px;
+    border-radius: 12px;
+    margin: 20px auto;
+    max-width: 1200px;
+    text-align: center;
+}
+
+.jumbotron-content {
+    max-width: 1000px;
+    margin: 0 auto;
+    color: #ffffff;
+}
+
+.jumbotron-content h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.jumbotron-content p {
+    font-size: 1.2em;
+}
+
+/* Services Cards Section */
+.services-cards-section {
+    padding: 40px 20px;
+    max-width: 1200px;
+    margin: 20px auto;
+    text-align: center;
+    background-color: rgba(182, 181, 175, 0.8); /* White with transparency */
+    border-radius: 12px;
+}
+
+.services-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    background-color: #073642;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    color: #ffffff;
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.card-body {
+    padding: 20px;
+}
+
+.card-title {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.card-text {
+    margin-bottom: 15px;
+}
+
+.btn-primary {
+    background-color: #004e54;
+    border-color: #004e54;
+    color: #ffffff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.btn-primary:hover {
+    background-color: #003b42;
+}
+
+/* Pre-Footer Section */
+.prefooter-section {
+    padding: 40px 20px;
+    background-color: rgba(10, 57, 64, 0.8); /* Darker green with transparency */
+    border-radius: 12px;
+    margin: 20px auto;
+    max-width: 1200px;
+    text-align: center;
+    color: #ffffff;
+}
+
+.prefooter-content a {
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+.prefooter-content a:hover {
+    text-decoration: none;
+}
+
+.view-all-services {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.view-all-services .btn {
+    background-color: #004e54;
+    color: #ffffff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.view-all-services .btn:hover {
+    background-color: #003b42;
+}

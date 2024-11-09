@@ -1,0 +1,85 @@
+/* Styles for Service Detail Page */
+body {
+    font-family: 'Helvetica Neue', sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    background: url('https://img.freepik.com/premium-photo/dark-green-leaves-park-background-image_946346-4172.jpg') no-repeat center center fixed;
+    background-size: cover;
+    background-color: rgba(0, 0, 0, 0.7); /* Adding a dark overlay for better contrast */
+}
+
+.service-detail-container {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.service-detail-section {
+    text-align: center;
+    color: #073642;
+}
+
+.service-detail-content {
+    margin-bottom: 40px;
+}
+
+.service-detail-content h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.service-detail-content img {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    border-radius: 8px;
+    margin: 20px 0;
+}
+
+.service-detail-content p {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+.reservation-section {
+    background-color: #073642;
+    color: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+}
+
+.reservation-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+}
+
+.reservation-form label {
+    font-size: 1.2em;
+}
+
+.reservation-form input {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 1em;
+}
+
+.btn-primary {
+    background-color: #004e54;
+    border-color: #004e54;
+    color: #ffffff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.btn-primary:hover {
+    background-color: #003b42;
+}
