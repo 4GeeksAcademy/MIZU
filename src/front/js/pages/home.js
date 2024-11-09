@@ -58,7 +58,7 @@ export const Home = () => {
                             </div>
                             <div className="card-body">
                                 <h5 className="card-title">{service.name}</h5>
-                                <p className="card-text">{service.description}</p>
+                             
                                 <Link to={service.link} className="btn btn-primary" data-mdb-ripple-init>Ver Servicio</Link>
                             </div>
                         </div>

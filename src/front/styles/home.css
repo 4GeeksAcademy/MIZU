@@ -4,7 +4,7 @@ body {
     margin: 0;
     padding: 0;
     line-height: 1.6;
-    background: url('https://img.freepik.com/premium-photo/dark-green-leaves-park-background-image_946346-4172.jpg') no-repeat center center fixed;
+    background: url('https://th.bing.com/th/id/R.3e6662e7adbe55f9d99cf2c15157d384?rik=zDsnC%2bKkqLra2w&pid=ImgRaw&r=0') no-repeat center center fixed;
     background-size: cover;
     background-color: rgba(0, 0, 0, 0.7); /* Adding a dark overlay for better contrast */
 }
@@ -48,7 +48,7 @@ p, a {
     max-width: 1200px;
     margin: 20px auto;
     text-align: center;
-    background-color: rgba(182, 181, 175, 0.8); /* White with transparency */
+    background-color: rgba(182, 181, 175, 0); /* White with transparency */
     border-radius: 12px;
 }
 

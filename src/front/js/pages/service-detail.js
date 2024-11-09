@@ -54,11 +54,11 @@ export const ServiceDetail = () => {
             {/* Service Detail Section */}
             <section id="service-detail" className="service-detail-section">
                 <div className="service-detail-content">
-                    <h1>{service.name}</h1>
+                    <h1 className="text-black">{service.name}</h1>
                     <img src={service.image} alt={service.name} className="service-image" />
-                    <p>{service.description}</p>
-                    <p><strong>Duración:</strong> {service.duration} minutos</p>
-                    <p><strong>Precio:</strong> {service.price}€</p>
+                    <p className="text-black">{service.description}</p>
+                    <p className="text-black"><strong>Duración:</strong> {service.duration} minutos</p>
+                    <p className="text-black"><strong>Precio:</strong> {service.price}€</p>
                 </div>
                 <div className="reservation-section">
                     <h2>Reserva tu sesión</h2>

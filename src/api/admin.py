@@ -10,10 +10,24 @@ class CustomModelView(ModelView):
 class ClienteModelView(CustomModelView):
     column_exclude_list = ['bookings', 'visits']
     form_excluded_columns = ['bookings', 'visits']
+    column_searchable_list = ['full_name', 'email', 'phone', 'dni_nie']
+    column_filters = ['acquisition_channel']
 
 class ServicioModelView(CustomModelView):
     column_exclude_list = ['bookings', 'visits']
     form_excluded_columns = ['bookings', 'visits']
+
+class ReservaModelView(CustomModelView):
+    column_searchable_list = ['status', 'date', 'time']
+    column_filters = ['status', 'date']
+
+class TransaccionModelView(CustomModelView):
+    column_searchable_list = ['payment_status', 'amount_paid', 'stripe_session_id']
+    column_filters = ['payment_status', 'transaction_date']
+
+class HistorialVisitaModelView(CustomModelView):
+    column_searchable_list = ['visit_date', 'additional_comments']
+    column_filters = ['visit_date']
 
 def setup_admin(app):
     app.secret_key = os.environ.get('FLASK_APP_KEY', 'sample key')
@@ -23,6 +37,6 @@ def setup_admin(app):
     # Add your models here
     admin.add_view(ClienteModelView(Cliente, db.session))
     admin.add_view(ServicioModelView(Servicio, db.session))
-    admin.add_view(ModelView(Reserva, db.session))
-    admin.add_view(ModelView(Transaccion, db.session))
-    admin.add_view(ModelView(HistorialVisita, db.session))
+    admin.add_view(ReservaModelView(Reserva, db.session))
+    admin.add_view(TransaccionModelView(Transaccion, db.session))
+    admin.add_view(HistorialVisitaModelView(HistorialVisita, db.session))
