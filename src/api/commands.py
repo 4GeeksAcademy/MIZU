@@ -1,34 +1,38 @@
-
 import click
-from api.models import db, User
+from api.models import db, Cliente
 
 """
 In this file, you can add as many commands as you want using the @app.cli.command decorator
-Flask commands are usefull to run cronjobs or tasks outside of the API but sill in integration 
-with youy database, for example: Import the price of bitcoin every night as 12am
+Flask commands are useful to run cron jobs or tasks outside of the API but still in integration 
+with your database, for example: Import the price of bitcoin every night at 12 am
 """
 def setup_commands(app):
     
     """ 
     This is an example command "insert-test-users" that you can run from the command line
-    by typing: $ flask insert-test-users 5
-    Note: 5 is the number of users to add
+    by typing: $ flask insert-test-clients 5
+    Note: 5 is the number of clients to add
     """
-    @app.cli.command("insert-test-users") # name of our command
-    @click.argument("count") # argument of out command
-    def insert_test_users(count):
-        print("Creating test users")
+    @app.cli.command("insert-test-clients") # name of our command
+    @click.argument("count") # argument of our command
+    def insert_test_clients(count):
+        print("Creating test clients")
         for x in range(1, int(count) + 1):
-            user = User()
-            user.email = "test_user" + str(x) + "@test.com"
-            user.password = "123456"
-            user.is_active = True
-            db.session.add(user)
+            client = Cliente(
+                nombre_completo=f"Test Client {x}",
+                telefono=f"123456789{x}",
+                direccion=f"Address {x}",
+                dni_nie=f"DNI{x}",
+                canal_adquisicion="test_channel"
+            )
+            db.session.add(client)
             db.session.commit()
-            print("User: ", user.email, " created.")
+            print("Client: ", client.nombre_completo, " created.")
 
-        print("All test users created")
+        print("All test clients created")
 
     @app.cli.command("insert-test-data")
     def insert_test_data():
-        pass
+        print("Inserting test data...")
+        # You can add logic to insert test data for other models here
+        print("Test data inserted.")
